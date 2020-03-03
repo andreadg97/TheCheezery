@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".RegistroActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/imagen1"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:scaleType="center"
+        android:layout_weight="3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:paddingHorizontal="40dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingVertical="15dp"
+            android:hint="Name"
+            android:textColor="@color/purpleishGrey"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingVertical="15dp"
+            android:hint="Last Name"
+            android:textColor="@color/purpleishGrey"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingVertical="15dp"
+            android:hint="E-Mail"
+            android:textColor="@color/purpleishGrey"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingVertical="15dp"
+            android:hint="Password"
+            android:textColor="@color/purpleishGrey"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:textStyle="italic"
+            android:layout_gravity="top|center"
+            android:textSize="12sp"
+            android:paddingLeft="10dp"
+            android:textColor="#808080"
+            android:text="I have read and accept terms and\nconditions of The Cheezery"/>
+
+        <Button
+            android:id="@+id/btn_signIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/boton_redondo"
+            android:text="SIGN IN"
+            android:textAlignment="center"
+            android:textColor="@color/dustyWhite"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
