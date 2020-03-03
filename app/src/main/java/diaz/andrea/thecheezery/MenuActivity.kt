@@ -11,8 +11,8 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        btn_1.setOnClickListener {
-            var intent = Intent(this,ColdDrinksActivity::class.java)
+        btn_colddrinks.setOnClickListener {
+            var intent = Intent(this,ProductosActivity::class.java)
             startActivity(intent)
         }
 
