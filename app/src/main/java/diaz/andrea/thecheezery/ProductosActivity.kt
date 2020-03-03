@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.producto_view.view.*
 
 class ProductosActivity : AppCompatActivity() {
     var coldDrinks = ArrayList<Product>()
+    var hotDrinks = ArrayList<Product>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,9 @@ class ProductosActivity : AppCompatActivity() {
         cargarProductos()
 
         var adaptador = AdaptadorProductos(this, coldDrinks)
+        listview.adapter = adaptador
+
+        adaptador = AdaptadorProductos(this, hotDrinks)
         listview.adapter = adaptador
     }
 
@@ -31,6 +35,12 @@ class ProductosActivity : AppCompatActivity() {
         coldDrinks.add(Product("Oreo Milkshake", R.drawable.oreomilkshake, "Chocolate ice cream, and oreo cookies. Topped with whipped cream with cocoa and chocolate syrup.", 7))
         coldDrinks.add(Product("Peanut Milkshake", R.drawable.peanutmilkshake, "Vanilla ice cream, mixed with peanut butter and chocolate.", 7))
 
+        hotDrinks.add(Product("Latte", R.drawable.latte, "Coffee drink made with espresso and steamed milk", 6))
+        hotDrinks.add(Product("Hot chocolate", R.drawable.hotchocolate, "Heated drink consisting of shaved chocolate, topped with marshmallows.", 5))
+        hotDrinks.add(Product("Espresso", R.drawable.espresso, "Full-flavored, concentrated form of coffee.", 4))
+        hotDrinks.add(Product("Chai Latte", R.drawable.chailatte, "Spiced tea concentrate with milk", 6))
+        hotDrinks.add(Product("Capuccino", R.drawable.capuccino, "A cappuccino is an espresso-based coffee drink, prepared with steamed foam.", 7))
+        hotDrinks.add(Product("American coffee", R.drawable.americano, "Espresso with hot water", 2))
     }
 
     private class AdaptadorProductos:BaseAdapter{

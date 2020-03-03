@@ -16,8 +16,8 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btn_2.setOnClickListener {
-            var intent = Intent(this,HotDrinksActivity::class.java)
+        btn_hotdrinks.setOnClickListener {
+            var intent = Intent(this,ProductosActivity::class.java)
             startActivity(intent)
         }
 
