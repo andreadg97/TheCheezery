@@ -1,6 +1,7 @@
 package diaz.andrea.thecheezery
 
 import android.content.Context
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,14 +17,43 @@ class ProductosActivity : AppCompatActivity() {
     var sweets = ArrayList<Product>()
     var salties = ArrayList<Product>()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
 
         cargarProductos()
 
-        var adaptador = AdaptadorProductos(this, coldDrinks)
-        listview.adapter = adaptador
+        var bundle = intent.extras
+        var origen: String ?
+
+        if(bundle != null){
+            origen = bundle.getString("boton_origen")
+
+
+            var adaptador:  AdaptadorProductos? = null
+            when(origen){
+                "colddrinks" -> adaptador = AdaptadorProductos(this, coldDrinks)
+                "hotdrinks" -> adaptador = AdaptadorProductos(this, hotDrinks)
+                "sweets" -> adaptador = AdaptadorProductos(this, sweets)
+                "salties" -> adaptador = AdaptadorProductos(this, salties)
+            }
+
+            if(adaptador != null){
+                listview.adapter = adaptador
+            }
+
+            // Colocar la imagen de arriba
+            when(origen){
+                "colddrinks" -> img_productos.setImageResource(R.drawable.colddrinks)
+                "hotdrinks" -> img_productos.setImageResource(R.drawable.hotdrinks)
+                "sweets" -> img_productos.setImageResource(R.drawable.sweets)
+                "salties" -> img_productos.setImageResource(R.drawable.salties)
+            }
+
+        }
+
     }
 
     fun cargarProductos(){
