@@ -16,10 +16,12 @@ class CombosActivity : AppCompatActivity() {
     var adaptador: AdaptadorCombos? = null
 
     fun cargarCombos(){
-        combos.add(Combo("Combo muffin",R.drawable.muffincombo,28,"Muffin y dos galletas de San Valentin"))
-        combos.add(Combo("Combo pastel",R.drawable.pastelcombo,40,"Rebanada de pastel y malteada mediana de fresa"))
-        combos.add(Combo("Combo palomitas",R.drawable.palomitascombo,62,"Palomitas y soda tamaño grande"))
-        combos.add(Combo("Combo hot-dog",R.drawable.hotdogcombo,56,"Hot-dog, orden de papas a la francesa y refresco 600 ml"))
+        combos.add(Combo("Combo muffin",R.drawable.muffincombo,3,"Muffin y dos galletas de San Valentin"))
+        combos.add(Combo("Combo pastel",R.drawable.pastelcombo,5,"Rebanada de pastel y malteada mediana de fresa"))
+        combos.add(Combo("Combo donas",R.drawable.combodonas,2,"Cuatro donas y una taza de cafe"))
+        combos.add(Combo("Combo brownie",R.drawable.combobrownie,3,"Tres brownies con chocolate y una taza de cafe"))
+        combos.add(Combo("Combo palomitas",R.drawable.palomitascombo,4,"Palomitas y soda tamaño grande"))
+        combos.add(Combo("Combo hot-dog",R.drawable.hotdogcombo,3,"Hot-dog, orden de papas a la francesa y refresco 600 ml"))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
